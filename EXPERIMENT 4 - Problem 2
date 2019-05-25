@@ -1,0 +1,55 @@
+#include<iostream>
+#include <conio.h>
+
+using namespace std;
+int main()
+
+{
+	int ArraySize, i, j, temp;
+	int Number[50];
+	
+	cout<<"Selection Sorting..."<<endl;
+	cout<<"Enter the array size: "; 
+	cin>>ArraySize;  
+	cout<<"Enter the "<<ArraySize << " elements: "<<endl;
+	
+	for(i = 0; i < ArraySize; i++)
+	{
+		cin>>Number[i];
+	} 
+	cout<<endl;
+	cout<<"Your data: ";
+	cout<<endl;
+	
+	for (int i = 0; i < ArraySize; i++)
+    {
+        cout<< Number[i]<<" ";
+    }
+	
+	for (i = 0; i < ArraySize; i++)
+	{
+		for(j = i + 1; j < ArraySize ; j++)
+		{
+			if(Number[i] > Number[j])
+			{
+				temp = Number[i];
+				Number[i] = Number[j];
+				Number[j] = temp;
+			}
+		}
+	}
+
+	cout<<endl;
+	cout<<"After using selection sort... "<<endl;
+	cout<<endl;
+	cout<<"The Sorted data is: ";
+	
+	for (i = 0; i < ArraySize; i++)
+	{
+		cout<<Number[i]<< " ";
+	}
+	
+	
+_getch();
+return 0;
+}
